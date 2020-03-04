@@ -15,6 +15,12 @@ jobs:
 - job: Build
   steps:
     - script: |
-        echo "hello"
+        pwd && ls -la
+        python restore 
+        python publish -c Release -o bin/Release/python$(python.version)
+        mkdir artifact
+        cp -r $(project_name)/bin/Release/python$(python.version) artifact/$(Build.SourceBranchName)
+
+
       displayName: Build Application 
   
