@@ -1,0 +1,20 @@
+
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  projectname: 'Jogo'
+  python.version: '3.5'
+
+
+jobs:
+- job: Build
+  steps:
+    - script: |
+        echo "hello"
+      displayName: Build Application 
+  
