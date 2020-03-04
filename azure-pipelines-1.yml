@@ -16,11 +16,7 @@ jobs:
   steps:
     - script: |
         pwd && ls -la
-        python restore 
-        python publish -c Release -o bin/Release/python$(python.version)
-        mkdir artifact
-        cp -r $(project_name)/bin/Release/python$(python.version) artifact/$(Build.SourceBranchName)
-
-
+        echo "Esta funcionando até aqui"
+        
       displayName: Build Application 
   
